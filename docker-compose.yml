@@ -1,0 +1,21 @@
+services:
+  mysql:
+    image: mysql:latest
+    environment:
+      MYSQL_ROOT_PASSWORD: 'root'
+      MYSQL_DATABASE: 'db'
+    volumes:
+      - ./script_solidareco.sql:/docker-entrypoint-initdb.d/script_solidareco.sql
+    ports:
+      - "3307:3306"
+
+  pythonapp:
+    build: .
+    depends_on:
+      - mysql
+    ports:
+      - "4000:5000"
+    volumes:
+      - ./app:/app
+    environment:
+      FLASK_ENV: development

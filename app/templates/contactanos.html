@@ -1,0 +1,223 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="{{ url_for ('static', filename='css/bootstrap.min.css') }}">
+    <link rel="stylesheet" href="{{ url_for ('static', filename='css/style.css') }}">
+    <link rel="stylesheet" href="{{ url_for ('static', filename='css/responsive.css') }}">
+    <link rel="icon" href="images/fevicon.png" type="image/gif" />
+    <link rel="stylesheet" href="{{ url_for ('static', filename='css/jquery.mCustomScrollbar.min.css') }}">
+    <link rel="stylesheet" href="https://netdna.bootstrapcdn.com/font-awesome/4.0.3/css/font-awesome.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/fancybox/2.1.5/jquery.fancybox.min.css" media="screen">">
+    <title>Contactanos</title>
+</head>
+<body>
+      <header>
+        <div class="header">
+           <div class="container">
+              <div class="row">
+                 <div class="col-md-12 col-sm-3 col logo_section">
+                    <div class="full">
+                       <div class="center-desk">
+                          <div class="logo">
+                             <a href="{{ url_for('Index') }}"><img src="{{ url_for('static', filename='images/logosolidareco.png') }}" alt="#" /></a>
+                          </div>
+                       </div>
+                    </div>
+                 </div>
+                 <div class="col-md-10 offset-md-1">
+                    <nav class="navigation navbar navbar-expand-md navbar-dark ">
+                       <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarsExample04" aria-controls="navbarsExample04" aria-expanded="false" aria-label="Toggle navigation">
+                       <span class="navbar-toggler-icon"></span>
+                       </button>
+                       <div class="collapse navbar-collapse" id="navbarsExample04">
+                          <ul class="navbar-nav mr-auto">
+                             <li class="nav-item active">
+                                <a class="nav-link" href="{{ url_for('Index') }}">Inicio</a>
+                             </li>
+                             <li class="nav-item">
+                                <a class="nav-link" href="">Nosotros</a>
+                             </li>
+                             <li class="nav-item">
+                                <a class="nav-link" href="">Asociaciones</a>
+                             </li>
+                             <li class="nav-item">
+                                <a class="nav-link" href="">Acciones del mes</a>
+                             </li>
+                             <li class="nav-item">
+                                <a class="nav-link" href=""> Comentario </a>
+                             </li>
+                             <li class="nav-item">
+                                <a class="nav-link" href="{{ url_for('Contactanos') }}">Contactanos</a>
+                             </li>
+                             <a class="nav-icon position-relative text-decoration-none" href="http://127.0.0.1:5000">
+                                <i class="fa fa-fw fa-user text-dark mr-3" style="font-size: 1.5em;"></i>
+                                <span class="position-absolute top-0 left-100 translate-middle badge rounded-pill bg-light text-dark"></span>
+                            </a>
+                            
+                          </ul>
+                       </div>
+                    </nav>
+                  </div>
+               </div>
+            </div>
+         </div>
+      </header> <!--FIN DE LA NAV BAR-->
+
+      <!--Banner-->
+      <div class="image-container">
+         <img src="{{ url_for('static', filename='images/bannerContacto.jpg') }}" alt="Banner contacto">
+         <div class="text-overlay">Contacto</div>
+      </div>
+      <!--Banner-->
+
+      <br><br>
+      <div class="titlepage">
+         <div class="container">
+            <div class="row">
+               <div class="col-md-12">
+                  <h2>Manda un mensaje  <i class="fa fa-comments" aria-hidden="true"></i></h2>
+                  <span>442 879 0590 | </span>
+                  <span>442 748 5072 | </span>
+                  <span>427 119 9759</span>
+               </div>
+            </div>
+            <div class="row">
+               <div class="col-md-12">
+                  <span>442 600 5049 | </span>
+                  <span>442 557 3623</span>
+               </div>
+            </div>
+         </div>
+      </div>
+      
+      <div class="titlepage">
+         <div class="container">
+            <div class="row">
+               <div class="col-md-12">
+                  <h2>Contacto por correo  <i class="fa fa-envelope-o" aria-hidden="true"></i></h2>
+                  <span>correo Electronico</span>
+               </i>
+               </div>
+            </div>
+         </div>
+      </div>
+
+      <div class="titlepage">
+         <div class="container">
+            <div class="row">
+               <div class="col-md-12">
+                  <h2>Redes sociales</h2>
+               </div>
+            </div>
+         </div>
+      </div>
+      <div class="row">
+         <div class=" col-md-12">
+            <ul class="social_icon">
+               <li><a href="#"><i class="fa fa-facebook" aria-hidden="true"></i></a></li>
+               <li><a href="#"><i class="fa fa-twitter" aria-hidden="true"></i></a></li>
+               <li><a href="#"><i class="fa fa-instagram" aria-hidden="true"></i></a></li>
+            </ul>
+         </div>
+      </div>
+
+
+      <div id="contact" class="contact">
+         <div class="container">
+            <div class="row">
+               <div class="col-md-6">
+                  <div class="titlepage">
+                     <h2>Manda un mensaje</h2>
+                  </div>
+               </div>
+               <div class="col-md-6">
+                  <div class="titlepage">
+                     <h2>Ubicación</h2>
+                     <span> Carretera Estatal 420 S/N, El Rosario, 76240, 76240 Santiago de Querétaro, Qro.</span>
+                  </div>
+               </div>
+            </div>
+
+            <div class="row">
+               <div class="col-md-6">
+                  <form id="request" class="main_form">
+                     <div class="row">
+                        <div class="col-md-12 ">
+                           <input class="contactus" placeholder="Nombre" type="type" name="Name"> 
+                        </div>
+                        <div class="col-md-12">
+                           <input class="contactus" placeholder="Correo" type="type" name="Email"> 
+                        </div>
+                        <div class="col-md-12">
+                           <input class="contactus" placeholder="Numero de telefono" type="type" name="Phone Number">                          
+                        </div>
+                        <div class="col-md-12">
+                           <textarea class="textarea" placeholder="Mensaje" type="type" Message="Name"></textarea>
+                        </div>
+                        <div class="col-md-12">
+                           <button class="send_btn">Enviar</button>
+                        </div>
+                     </div>
+                  </form>
+               </div>
+               <div class="col-md-6">
+                  <div class="map_main">
+                     <div class="map-responsive">
+                        <iframe src="https://www.google.com/maps?q=upq&output=embed" width="600" height="345" frameborder="0" style="border:0; width: 100%;" allowfullscreen=""></iframe>
+                     </div>
+                  </div>
+               </div>
+            </div>
+         </div>
+      </div>
+
+      <footer>
+         <div class="footer">
+            <div class="container">
+               <div class="row">
+                  <div class=" col-md-3 col-sm-6">
+                     <ul class="social_icon">
+                        <li><a href="#"><i class="fa fa-facebook" aria-hidden="true"></i></a></li>
+                        <li><a href="#"><i class="fa fa-twitter" aria-hidden="true"></i></a></li>
+                        <li><a href="#"><i class="fa fa-instagram" aria-hidden="true"></i></a></li>
+                     </ul>
+                     <p class="variat pad_roght2">
+                     </p>
+                  </div>
+                  <div class=" col-md-3 col-sm-6">
+                     <h3>Nosotros de podemos apoyar</h3>
+                     <p  class="variat pad_roght2">
+                        Si te interesa formar parte de nuestro equipo,
+                        <br>o darle publicidad a tu campaña contactanos
+                     </p>
+                  </div>
+                  <div class="col-md-3 col-sm-6">
+                     <h3>General</h3>
+                     <ul class="link_menu">
+                        <li><a href="index.html">Inicio</a></li>
+                        <li><a href="about.html"> Nosotros</a></li>
+                        <li><a href="service.html">Asociaciones</a></li>
+                        <li><a href="gallery.html">Acciones del mes</a></li>
+                        <li><a href="testimonial.html">Comentarios</a></li>
+                        <li><a href="contact.html">Contacto</a></li>
+                     </ul>
+                  </div>
+                  <div class="col-md-3 col-sm-6">
+                     <h3>Ayudemos al planeta</h3>
+                     <p  class="variat">Cuidar el medio ambiente hoy es asegurar un mañana saludable para las futuras generaciones.
+                     </p>
+                  </div>
+               </div>
+            </div>
+         </div>
+      </footer>
+
+      <script src="js/jquery.min.js"></script>
+      <script src="js/bootstrap.bundle.min.js"></script>
+      <script src="js/jquery-3.0.0.min.js"></script>
+      <script src="js/jquery.mCustomScrollbar.concat.min.js"></script>
+      <script src="js/custom.js"></script>
+</body>
+</html>

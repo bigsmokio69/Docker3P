@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Tablas de Datos</title>
+    <!-- Añade tus estilos CSS aquí -->
+</head>
+<body>
+    <h1>Administración de Datos</h1>
+
+    <!-- Usuarios -->
+    <h2>Usuarios</h2>
+    {% for usuario in usuarios %}
+    <form action="{{ url_for('editar_usuario', id_usuario=usuario.id_usuario) }}" method="post">
+        <label>Nombre:</label>
+        <input type="text" name="nombre" value="{{ usuario.nombre }}" required>
+        <label>Correo:</label>
+        <input type="email" name="correo" value="{{ usuario.correo }}" required>
+        <label>Contraseña:</label>
+        <input type="password" name="contrasena" placeholder="Nueva contraseña">
+        <button type="submit">Guardar Cambios</button>
+    </form>
+    <hr>
+    {% endfor %}
+
+    <!-- Patrocinadores -->
+    <h2>Patrocinadores</h2>
+    {% for patrocinador in patrocinadores %}
+    <form action="{{ url_for('editar_patrocinador', id_patrocinador=patrocinador.id_patrocinador) }}" method="post">
+        <label>Nombre:</label>
+        <input type="text" name="nombre" value="{{ patrocinador.nombre }}" required>
+        <label>Descripción:</label>
+        <input type="text" name="descripcion" value="{{ patrocinador.descripcion }}">
+        <button type="submit">Guardar Cambios</button>
+    </form>
+    <hr>
+    {% endfor %}
+
+    <!-- Añade aquí secciones para otros modelos -->
+
+</body>
+</html>
